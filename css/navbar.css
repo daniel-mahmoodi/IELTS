@@ -1,0 +1,40 @@
+.navbar-brand img {
+    width: 15rem;
+}
+
+.navbar-center {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background: #02359e;
+    border-bottom: 0.1rem solid rgba(8, 8, 8, 0.1);
+    z-index: 100;
+}
+
+.navbar {
+    background: #02359e
+}
+
+
+/*search icone inside of input  */
+
+.navbar-search {
+    width: 30rem;
+}
+
+.form-group .form-control {
+    padding-left: 2.375rem;
+}
+
+.form-group .form-control-icon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
