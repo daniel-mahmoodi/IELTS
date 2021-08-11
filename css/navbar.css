@@ -1,5 +1,20 @@
+.navbar-hamberger--icon {
+    cursor: pointer;
+    display: block;
+    background: url(/img/master-sprite.png);
+}
+
+.navbar-hamberger--iconPosition {
+    width: 30px;
+    height: 29px;
+    background-position-x: -31px;
+    background-position-y: -765px;
+    vertical-align: middle;
+}
+
 .navbar-brand img {
-    width: 15rem;
+    width: 13rem;
+    margin: 0;
 }
 
 .navbar-center {
@@ -8,19 +23,43 @@
     padding: 0;
     width: 100%;
     background: #02359e;
-    border-bottom: 0.1rem solid rgba(8, 8, 8, 0.1);
+    /* border-bottom: 0.1rem solid rgba(8, 8, 8, 0.1); */
     z-index: 100;
 }
 
 .navbar {
-    background: #02359e
+    background: #02359e;
+    width: 75rem;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.navbar-search {
+    width: 50%;
 }
 
 
 /*search icone inside of input  */
 
-.navbar-search {
-    width: 30rem;
+@media only screen and (max-width: 1199.98px) {
+    .navbar-search {
+        padding: 8px 16px;
+        background: #02359e;
+        top: 49px;
+        position: fixed;
+        width: 100%;
+        left: 0;
+    }
+    body {
+        background-color: lightblue;
+    }
+    .navbar {
+        width: 100%;
+    }
+}
+
+.form-group {
+    margin: 0;
 }
 
 .form-group .form-control {
@@ -37,4 +76,39 @@
     text-align: center;
     pointer-events: none;
     color: #aaa;
+}
+
+.navbar-login {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    box-sizing: inherit;
+    flex-grow: 0;
+}
+
+.navbar-login a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar-login--icon {
+    display: inline-block;
+    background: url(/img/master-sprite.png);
+    /* box-sizing: border-box; */
+    /* text-align: left; */
+    /* text-indent: -9999px; */
+    /* overflow: hidden; */
+}
+
+.navbar-login--iconPosition {
+    width: 30px;
+    height: 29px;
+    background-position-x: -59px;
+    background-position-y: -611px;
+    vertical-align: middle;
 }

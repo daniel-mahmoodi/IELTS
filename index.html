@@ -10,37 +10,226 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/megaMenu.css">
 </head>
 
-<body>
-    <navbar class="navbar-center d-lg-flex justify-content-around">
-        <nav class=" navbar navbar-expand-lg">
-            <div>
-                <a class="navbar-brand ml-auto" href="#"><img src="./img/logo.png"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <!-- search icone inside of input -->
-            <div class="navbar-search">
+<body style="background-color: black;">
+    <!-- <navbar class="navbar-center d-xl-flex justify-content-xl-center align-items-xl-center ">
+        <nav class=" navbar navbar-expand-xl d-flex justify-content-between m-auto align-items-center">
+            <i class="navbar-hamberger--icon navbar-hamberger--iconPosition d-xl-none "></i>
+            <a class="navbar-brand m-auto d-flex" href="#"><img src="./img/logo.png"></a>
+            <div class="navbar-search m-auto">
                 <div class="form-group">
                     <span class="fa fa-search form-control-icon"></span>
-                    <input type="text" class="form-control" placeholder="Search for courses, live classes and more">
+                    <input type="text" class="form-control " placeholder="Search for courses, live classes and more">
                 </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active navbar-login">
-                        <a class="nav-link" href="#">login/out <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
+            <div class="d-none d-xl-flex navbar-login m-auto " id="navbarSupportedContent">
+                <a class="nav-link" href="#">
+                    <i class="navbar-login--icon navbar-login--iconPosition"></i> Login/Signup
+                    <span class="sr-only">(current)</span></a>
+                </li>
             </div>
         </nav>
-    </navbar>
+    </navbar> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample3" aria-controls="navbarExample3" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
 
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarExample3">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Regular link</a>
+                    </li>
+                    <!-- Navbar dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              Mega menu
+            </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+              ">
+                            <div class="container">
+                                <div class="row my-4">
+                                    <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                                        <div class="list-group list-group-flush">
+                                            <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                                                Lorem ipsum
+                                            </p>
+                                            <a href="" class="list-group-item list-group-item-action"><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Dolor sit</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Amet consectetur</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Cras justo odio</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Adipisicing elit</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-6 col-lg-3 mb-3 mb-lg-0"
+                  >
+                    <div
+                      class="list-group list-group-flush"
+                    >
+                      <p
+                        class="mb-0 list-group-item text-uppercase font-weight-bold"
+                      >
+                        Explicabo voluptas
+                      </p>
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Perspiciatis quo</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Cras justo odio</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Laudantium maiores</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Provident dolor</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="col-md-6 col-lg-3 mb-3 mb-md-0"
+                  >
+                    <div
+                      class="list-group list-group-flush"
+                    >
+                      <p
+                        class="mb-0 list-group-item text-uppercase font-weight-bold"
+                      >
+                        Iste quaerato
+                      </p>
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Cras justo odio</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Est iure</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Praesentium</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        ><i
+                          class="fas fa-caret-right pe-2"
+                        ></i
+                        >Laboriosam</a
+                      >
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                    <div
+                      class="list-group list-group-flush"
+                    >
+                      <p
+                        class="mb-0 list-group-item text-uppercase font-weight-bold"
+                      >
+                        Cras justo odio
+                      </p>
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        >Saepe</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        >Vel alias</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        >Sunt doloribus</a
+                      >
+                      <a
+                        href=""
+                        class="list-group-item list-group-item-action"
+                        >Cum dolores</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
 
 
 
