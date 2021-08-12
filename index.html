@@ -10,16 +10,19 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="./js/megaMenu.js"></script>
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/megaMenu.css">
+    <link rel="stylesheet" href="./css/sideMenu.css">
 </head>
 
 <body style="background-color: black;">
-    <!-- <navbar class="navbar-center d-xl-flex justify-content-xl-center align-items-xl-center ">
+    <navbar class="navbar-center d-xl-flex justify-content-xl-center align-items-xl-center ">
         <nav class=" navbar navbar-expand-xl d-flex justify-content-between m-auto align-items-center">
-            <i class="navbar-hamberger--icon navbar-hamberger--iconPosition d-xl-none "></i>
+            <a href="#" onclick="openSlideMenu()">
+                <i class="navbar-hamberger--icon navbar-hamberger--iconPosition d-xl-none "></i>
+            </a>
             <a class="navbar-brand m-auto d-flex" href="#"><img src="./img/logo.png"></a>
             <div class="navbar-search m-auto">
                 <div class="form-group">
@@ -34,205 +37,87 @@
                 </li>
             </div>
         </nav>
-    </navbar> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Toggle button -->
-            <button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample3" aria-controls="navbarExample3" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
+    </navbar>
+    <!-- start to mega menu -->
+    <div class="megaMenuHead d-none d-xl-block">
+        <nav class="navbar navbar-light bg-light navbar-expand-xl m-auto " id="myNavbar">
 
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarExample3">
-                <!-- Left links -->
-                <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Regular link</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <a href="#" class="navbar-brand"></a>
+            <div class="collapse navbar-collapse mr-4" id="mainNav">
+                <ul class="navbar-nav ml-auto nav-fill">
+
+                    <li class="nav-item px-4 dropdown">
+                        <a class="nav-link dropdown" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other Essentials <span class="caret"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="servicesDropdown">
+
+                            <div class="d-md-flex align-items-start justify-content-start">
+                                <div>
+                                    <div class="dropdown-item"> IELTS Exam</div>
+                                    <a class="dropdown-item" href="#">IELTS Test Dates</a>
+                                    <a class="dropdown-item" href="#">IELTS Test Centers</a>
+                                    <a class="dropdown-item" href="#">IELTS Registration</a>
+                                    <a class="dropdown-item" href="#">IELTS Test Day Preparation</a>
+                                    <a class="dropdown-item" href="#">IELTS Results</a>
+                                    <a class="dropdown-item" href="#">IELTS Books</a>
+                                    <a class="dropdown-item" href="#">IELTS Preparation Tips</a>
+                                    <a class="dropdown-item" href="#">IELTS Grammar</a>
+                                    <a class="dropdown-item" href="#">IELTS Vocabulary</a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
-                    <!-- Navbar dropdown -->
-                    <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              Mega menu
-            </a>
-                        <!-- Dropdown menu -->
-                        <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-              ">
-                            <div class="container">
-                                <div class="row my-4">
-                                    <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
-                                        <div class="list-group list-group-flush">
-                                            <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                                                Lorem ipsum
-                                            </p>
-                                            <a href="" class="list-group-item list-group-item-action"><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Dolor sit</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Amet consectetur</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Cras justo odio</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Adipisicing elit</a
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="col-md-6 col-lg-3 mb-3 mb-lg-0"
-                  >
-                    <div
-                      class="list-group list-group-flush"
-                    >
-                      <p
-                        class="mb-0 list-group-item text-uppercase font-weight-bold"
-                      >
-                        Explicabo voluptas
-                      </p>
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Perspiciatis quo</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Cras justo odio</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Laudantium maiores</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Provident dolor</a
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="col-md-6 col-lg-3 mb-3 mb-md-0"
-                  >
-                    <div
-                      class="list-group list-group-flush"
-                    >
-                      <p
-                        class="mb-0 list-group-item text-uppercase font-weight-bold"
-                      >
-                        Iste quaerato
-                      </p>
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Cras justo odio</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Est iure</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Praesentium</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        ><i
-                          class="fas fa-caret-right pe-2"
-                        ></i
-                        >Laboriosam</a
-                      >
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <div
-                      class="list-group list-group-flush"
-                    >
-                      <p
-                        class="mb-0 list-group-item text-uppercase font-weight-bold"
-                      >
-                        Cras justo odio
-                      </p>
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        >Saepe</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        >Vel alias</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        >Sunt doloribus</a
-                      >
-                      <a
-                        href=""
-                        class="list-group-item list-group-item-action"
-                        >Cum dolores</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+                </ul>
             </div>
-          </li>
-        </ul>
-        <!-- Left links -->
-      </div>
-      <!-- Collapsible wrapper -->
+        </nav>
     </div>
-    <!-- Container wrapper -->
-  </nav>
+    <!-- end of mega menu -->
+    <!-- start sidebar -->
 
+    <!-- <nav class="navbar">
+        <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span> -->
+    <!-- 
+    <ul class="navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </nav> -->
+    <div class="grayBgSlideNav">
 
+        <div id="side-menu" class="side-nav">
+            <!-- <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> -->
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
 
+    <script>
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+        }
+
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+        }
+    </script>
+
+    <!-- end of sidebar -->
 </body>
 
 </html>
