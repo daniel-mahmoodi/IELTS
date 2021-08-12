@@ -95,29 +95,32 @@
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
-    </nav> -->
-    <div class="grayBgSlideNav">
+</nav> -->
+    <div class="grayBgSlideNav" id="grayBgSlideNav"></div>
 
-        <div id="side-menu" class="side-nav">
-            <!-- <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a> -->
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </div>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#" onclick="openHomeMenu()"> IELTS Modules <span class="side-nav--caret"></span></a>
+        <a href="#">Online Classes</a>
+        <a href="#">Video Courses</a>
+        <a href="#">eBooks</a>
+        <a href="#">Other Essentials</a>
     </div>
 
-    <script>
-        function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '250px';
-        }
 
-        function closeSlideMenu() {
-            document.getElementById('side-menu').style.width = '0';
-        }
-    </script>
-
-    <!-- end of sidebar -->
+    <!-- home -->
+    <div class="openHomeMenu" id="openHomeSide-Menu">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a class="homeSide-item" href="#">IELTS Test Dates <span class="side-nav--caret"></span></a>
+        <a class="homeSide-item" href="#">IELTS Test Centers</a>
+        <a class="homeSide-item" href="#">IELTS Registration</a>
+        <a class="homeSide-item" href="#">IELTS Test Day Preparation</a>
+        <a class="homeSide-item" href="#">IELTS Results</a>
+        <a class="homeSide-item" href="#">IELTS Books</a>
+        <a class="homeSide-item" href="#">IELTS Preparation Tips</a>
+        <a class="homeSide-item" href="#">IELTS Grammar</a>
+        <a class="homeSide-item" href="#">IELTS Vocabulary</a>
+        <!-- end of sidebar -->
 </body>
 
 </html>

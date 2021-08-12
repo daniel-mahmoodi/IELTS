@@ -1,6 +1,38 @@
 .grayBgSlideNav {
-    background-color: black;
-    opacity: 0.8;
+    display: block;
+    background: rgba(0, 0, 0, 0.63);
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.openHomeMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 56px;
+    right: 20%;
+    background-color: #f8f9fa;
+    opacity: 1;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.openHomeMenu .homeSide-item {
+    display: block;
+}
+
+.side-nav--caret {
+    width: 28px;
+    height: 12px;
+    display: inline-block;
+    background: url(/img/caret.png) no-repeat;
+    transform: rotate(-90deg);
 }
 
 .side-nav {
@@ -14,7 +46,7 @@
     opacity: 1;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.1s;
+    transition: 0.3s;
 }
 
 .side-nav a {
@@ -26,14 +58,13 @@
     transition: 0.3s;
 }
 
-
-/* .side-nav .btn-close {
+.side-nav .btn-close {
     position: absolute;
     top: 0;
     right: 22px;
     font-size: 36px;
     margin-left: 50px;
-} */
+}
 
 @media(max-width:568px) {
     .navbar-nav {
